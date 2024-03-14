@@ -12,8 +12,8 @@ def calculate_cost_per_product(data_frame):
     cost_per_product = np.dot(A_pseudo_inverse, C)
     return cost_per_product
 
-if __name__ == "__main__":
-    # Read Excel data
+def main():
+     # Read Excel data
     df = read_excel_data('Lab Session1 Data.xlsx', sheet_name='Purchase data')
     
     # Calculate properties
@@ -30,4 +30,7 @@ if __name__ == "__main__":
     print("Rank of Matrix A:", rank_A)
     print("Cost of each product using Pseudo-Inverse:")
     print(cost_per_product)
+    
+if __name__ == "__main__":
+   main()
 
